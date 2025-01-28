@@ -1,0 +1,98 @@
+:root {
+    --primary-background-color: #272226;
+    --second-background-color: #464145;
+    --text-color: #b2a895;
+    --primary-accent-color: #c49250;
+    --second-accent-color: #d5d2c9;
+    --card-border-color: #c4925046;
+}
+
+body {
+    background-color: var(--primary-background-color);
+}
+
+.card {
+    background-color: var(--second-background-color);
+    --bulma-card-content-padding: 0.rem;
+    border: solid 2px var(--second-background-color);
+}
+
+.card-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.card-name {
+    color: var(--second-accent-color);
+}
+
+.card-region {
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-background-color);
+}
+
+.title {
+    color: var(--primary-accent-color);
+}
+
+.nav-link {
+    padding: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    padding: 0.5rem;
+    padding-bottom: 0.25rem;
+    background-color: var(--second-background-color);
+    border-radius: 10px;
+}
+
+.selected-nav-link {
+    padding: 0.5rem;
+    padding-bottom: 0.25rem;
+    background-color: var(--primary-accent-color);
+    border-radius: 10px;
+}
+
+.copy-icon {
+    color: var(--second-accent-color);
+}
+
+.copy-icon:hover {
+    color: var(--primary-accent-color);
+}
+
+#footer {
+    background-color: var(--second-background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--primary-accent-color);
+}
+
+/* hide page scrollbar */
+
+/* Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* IE and Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+/* Chrome */
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* end hide page scrollbar */

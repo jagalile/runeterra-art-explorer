@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RAE</title>
+    <link rel="icon" href="{{ url_for('static', path='/img/favicon.ico') }}" type="image/x-icon" />
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+    <!-- CSS -->
+    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet" />
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', path='/js/modal.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/clipboard.js') }}"></script>
+    <!-- FaFa Icons -->
+    <script src="https://kit.fontawesome.com/426c9ab712.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      {% include 'navbar.html' %}
+    </header>
+    <main class="mt-6 mx-4">
+      {% include 'cards.html' %}
+    </main>
+  </body>
+</html>

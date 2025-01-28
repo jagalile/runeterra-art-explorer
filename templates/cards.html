@@ -1,0 +1,41 @@
+<div class="grid is-col-min-15" id="cards" hx-get="/pagination/?index={{ index }}&region={{ region }}" hx-trigger="revealed" hx-swap="afterend">
+  {% for card in cards %}
+    <div class="cell">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-16by9">
+            <img src="{{ card.img }}" alt="{{ card.name }}" onclick="openModal('{{ card.code }}');" />
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <div class="fixed-grid has-6-cols">
+              <div class="grid">
+                <div class="cell is-col-span-4">
+                  <div class="card-name">{{ card.name }}</div>
+                  <div class="card-region">{{ card.regions|join(', ') }}</div>
+                </div>
+                <div class="cell m-auto">
+                  <a class="copy-icon" href="{{ card.img }}" target="_blank"><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <div class="cell m-auto">
+                  <button class="copy-icon" onclick="clipboard('{{ card.img }}');"><i class="fa-regular fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="{{ card.code }}">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image is-16by9">
+          <img src="{{ card.img }}" alt="{{ card.name }}" />
+        </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close" onclick="closeModal('{{ card.code }}');"></button>
+    </div>
+  {% endfor %}
+</div>

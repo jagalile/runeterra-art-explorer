@@ -1,0 +1,70 @@
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ url_for('root') }}"><div class="title is-2">Runeterra Art Explorer</div></a>
+  </div>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      {% if region == 'all' %}
+        <a href="{{ url_for('region_cards', region='all') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-all.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='all') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-all.png') }}" /></a>
+      {% endif %}
+      {% if region == 'bandlecity' %}
+        <a href="{{ url_for('region_cards', region='bandlecity') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-bandlecity.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='bandlecity') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-bandlecity.png') }}" /></a>
+      {% endif %}
+      {% if region == 'bilgewater' %}
+        <a href="{{ url_for('region_cards', region='bilgewater') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-bilgewater.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='bilgewater') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-bilgewater.png') }}" /></a>
+      {% endif %}
+      {% if region == 'demacia' %}
+        <a href="{{ url_for('region_cards', region='demacia') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-demacia.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='demacia') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-demacia.png') }}" /></a>
+      {% endif %}
+      {% if region == 'freljord' %}
+        <a href="{{ url_for('region_cards', region='freljord') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-freljord.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='freljord') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-freljord.png') }}" /></a>
+      {% endif %}
+      {% if region == 'ionia' %}
+        <a href="{{ url_for('region_cards', region='ionia') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-ionia.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='ionia') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-ionia.png') }}" /></a>
+      {% endif %}
+      {% if region == 'noxus' %}
+        <a href="{{ url_for('region_cards', region='noxus') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-noxus.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='noxus') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-noxus.png') }}" /></a>
+      {% endif %}
+      {% if region == 'piltoverzaun' %}
+        <a href="{{ url_for('region_cards', region='piltoverzaun') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-piltoverzaun.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='piltoverzaun') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-piltoverzaun.png') }}" /></a>
+      {% endif %}
+      {% if region == 'runeterra' %}
+        <a href="{{ url_for('region_cards', region='runeterra') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-runeterra.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='runeterra') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-runeterra.png') }}" /></a>
+      {% endif %}
+      {% if region == 'shadowisles' %}
+        <a href="{{ url_for('region_cards', region='shadowisles') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-shadowisles.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='shadowisles') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-shadowisles.png') }}" /></a>
+      {% endif %}
+      {% if region == 'shurima' %}
+        <a href="{{ url_for('region_cards', region='shurima') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-shurima.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='shurima') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-shurima.png') }}" /></a>
+      {% endif %}
+      {% if region == 'targon' %}
+        <a href="{{ url_for('region_cards', region='targon') }}" class="selected-nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-targon.png') }}" /></a>
+      {% else %}
+        <a href="{{ url_for('region_cards', region='targon') }}" class="nav-link"><img class="circle tiny" src="{{ url_for('static', path='/img/regions/icon-targon.png') }}" /></a>
+      {% endif %}
+    </div>
+  </div>
+</nav>
